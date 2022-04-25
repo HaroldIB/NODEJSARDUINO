@@ -14,9 +14,10 @@ const server = http.createServer(app);
 
 const io = new Server(server);
 
+const port = process.env.PORT || 4000;
 app.use(express.static(__dirname + '/public'));
 
-server.listen(4000, () => {
+server.listen(port, () => {
     console.log('servidor en el puerto 4000')
 })
 
